@@ -8,5 +8,5 @@
 html, body, #root{
   background-color: #efefef;
   height: 100%;
-
+  overflow-x: hidden;
 }

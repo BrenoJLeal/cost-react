@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/cost-react/static/css/main.f855e6bc.css",
-    "main.js": "/cost-react/static/js/main.9c47acb1.js",
-    "static/js/787.286dc92d.chunk.js": "/cost-react/static/js/787.286dc92d.chunk.js",
-    "static/media/logo.svg": "/cost-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/cost-react/static/css/main.ca07334a.css",
+    "main.js": "/cost-react/static/js/main.f89ee2df.js",
     "index.html": "/cost-react/index.html",
-    "main.f855e6bc.css.map": "/cost-react/static/css/main.f855e6bc.css.map",
-    "main.9c47acb1.js.map": "/cost-react/static/js/main.9c47acb1.js.map",
-    "787.286dc92d.chunk.js.map": "/cost-react/static/js/787.286dc92d.chunk.js.map"
+    "main.ca07334a.css.map": "/cost-react/static/css/main.ca07334a.css.map",
+    "main.f89ee2df.js.map": "/cost-react/static/js/main.f89ee2df.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.9c47acb1.js"
+    "static/css/main.ca07334a.css",
+    "static/js/main.f89ee2df.js"
   ]
 }

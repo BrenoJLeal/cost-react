@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cost-react/static/css/main.ca07334a.css",
+    "main.css": "/cost-react/static/css/main.22107e50.css",
     "main.js": "/cost-react/static/js/main.46bf108d.js",
     "index.html": "/cost-react/index.html",
-    "main.ca07334a.css.map": "/cost-react/static/css/main.ca07334a.css.map",
+    "main.22107e50.css.map": "/cost-react/static/css/main.22107e50.css.map",
     "main.46bf108d.js.map": "/cost-react/static/js/main.46bf108d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca07334a.css",
+    "static/css/main.22107e50.css",
     "static/js/main.46bf108d.js"
   ]
 }

@@ -15,7 +15,6 @@
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://BrenoJLeal.github.io/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

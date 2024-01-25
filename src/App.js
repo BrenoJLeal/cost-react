@@ -15,14 +15,13 @@ function App() {
       <NavBar/>
       <Container customClass="min-height">
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/projects" element={<Projects/>}/>
-          <Route exact path="/company" element={<Company/>}/>
-          <Route exact path='/contact' element={<Contato/>}/>
-          <Route exact path="/newproject" element={<NewProject/>}/>
+          <Route path="/projects" element={<Projects/>}/>
+          <Route path="/company" element={<Company/>}/>
+          <Route path='/contact' element={<Contato/>}/>
+          <Route path="/newproject" element={<NewProject/>}/>
+          <Route exact path="/cost-react" element={<Home/>}/>
         </Routes>
       </Container>
-
       <Footer/>
     </Router>
   );

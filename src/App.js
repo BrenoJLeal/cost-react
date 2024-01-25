@@ -11,15 +11,16 @@ import Projects from './components/pages/Projects';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <NavBar/>
       <Container customClass="min-height">
         <Routes>
+        <Route exact path="/" element={<Home/>}/>
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/company" element={<Company/>}/>
           <Route path='/contact' element={<Contato/>}/>
           <Route path="/newproject" element={<NewProject/>}/>
-          <Route exact path="/" element={<Home/>}/>
+          
         </Routes>
       </Container>
       <Footer/>

@@ -1,5 +1,5 @@
 import styles from './NavBar.module.css'
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Container from './Container';
 import logo from '../../img/costs_logo.png'
 const NavBar = () => {

@@ -98,6 +98,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "26ac",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "budget": "1",
+      "name": "g",
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [

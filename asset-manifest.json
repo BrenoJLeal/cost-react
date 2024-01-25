@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/cost-react/static/css/main.22107e50.css",
-    "main.js": "/cost-react/static/js/main.46bf108d.js",
+    "main.css": "/cost-react/static/css/main.100e44b5.css",
+    "main.js": "/cost-react/static/js/main.ebe74a14.js",
+    "static/media/savings.svg": "/cost-react/static/media/savings.25a5174d3c0ce57522d68f3ba58b7407.svg",
     "index.html": "/cost-react/index.html",
-    "main.22107e50.css.map": "/cost-react/static/css/main.22107e50.css.map",
-    "main.46bf108d.js.map": "/cost-react/static/js/main.46bf108d.js.map"
+    "main.100e44b5.css.map": "/cost-react/static/css/main.100e44b5.css.map",
+    "main.ebe74a14.js.map": "/cost-react/static/js/main.ebe74a14.js.map"
   },
   "entrypoints": [
-    "static/css/main.22107e50.css",
-    "static/js/main.46bf108d.js"
+    "static/css/main.100e44b5.css",
+    "static/js/main.ebe74a14.js"
   ]
 }

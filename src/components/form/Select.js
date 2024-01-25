@@ -5,7 +5,7 @@ const Select = ({ text, name, options, handleOnChange, value}) => {
     return ( 
         <div className={styles.form_control}>
             <label htmlFor={name}>{text}</label>
-            <select name={name} id={name}>
+            <select onChange={handleOnChange} value={value || ''} name={name} id={name}>
                 <option>Selecione uma opção</option>
                 {options && options.map((option) => (
                     <option value={option.id} key={option.id}>

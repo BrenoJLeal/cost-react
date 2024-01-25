@@ -8,6 +8,7 @@ const NewProject = () => {
 
     //Função de Submit para o servidor JSON
     const createPost = (project) =>{
+        
         // Initicialização de cost e services
         project.cost = 0
         project.services = []
@@ -34,7 +35,7 @@ const NewProject = () => {
             <p>Crie seu projeto para depois adicionar os serviços</p>
             <ProjectForm handleSubmit={createPost} btnText="Criar projeto"/>
         </div>
-     );
+    );
 }
- 
+
 export default NewProject;

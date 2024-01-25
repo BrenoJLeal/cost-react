@@ -1,5 +1,5 @@
 {
-  "name": "cost-react",
+  "name": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://BrenoJLeal.github.io/cost-react",
+  "homepage": "http://BrenoJLeal.github.io/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

@@ -6,10 +6,10 @@ const NavBar = () => {
     return ( 
         <nav className={styles.navbar}>
             <Container>
-                <Link to='/cost-react'><img src={logo} alt="Costs"/></Link>
+                <Link to='/'><img src={logo} alt="Costs"/></Link>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <Link to='/cost-react'>Home</Link>
+                        <Link to='/'>Home</Link>
                     </li>
                     <li className={styles.item}> 
                         <Link to='/projects'>Projetos</Link>

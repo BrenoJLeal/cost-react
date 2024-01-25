@@ -18,8 +18,8 @@ function App() {
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/company" element={<Company/>}/>
           <Route path='/contact' element={<Contato/>}/>
-          <Route path="/cost-react/newproject" element={<NewProject/>}/>
-          <Route exact path="/cost-react" element={<Home/>}/>
+          <Route path="/newproject" element={<NewProject/>}/>
+          <Route exact path="/" element={<Home/>}/>
         </Routes>
       </Container>
       <Footer/>

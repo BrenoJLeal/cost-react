@@ -8,7 +8,7 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
     const [project, setProject] = useState(projectData || {});
 
     useEffect(() =>{
-        fetch('http://localhost:5000/categories',
+        fetch('https://cost-server-kappa.vercel.app/categories',
         {
             method:"GET",
             headers: {

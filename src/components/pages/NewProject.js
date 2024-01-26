@@ -12,7 +12,7 @@ const NewProject = () => {
         // Initicialização de cost e services
         project.cost = 0
         project.services = []
-        // Lembrar de substituir o localhost por um servidor JSON
+        
         fetch('http://localhost:5000/projects',{
             method: "POST",
             headers: {

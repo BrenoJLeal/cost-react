@@ -11,7 +11,7 @@ const NewProject = () => {
         // Inicialização de cost e services
         project.cost = 0
         project.services = []
-
+        
         fetch('https://cost-server-kappa.vercel.app/projects',{
             method: "POST",
             headers: {

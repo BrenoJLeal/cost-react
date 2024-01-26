@@ -4,16 +4,15 @@ import styles from './NewProject.module.css'
 
 const NewProject = () => {
 
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     //Função de Submit para o servidor JSON
     const createPost = (project) =>{
-        
-        // Initicialização de cost e services
+        // Inicialização de cost e services
         project.cost = 0
         project.services = []
 
-        fetch('http://localhost:5000/projects',{
+        fetch('https://cost-server-kappa.vercel.app/projects',{
             method: "POST",
             headers: {
                 'Content-type': 'application/json',
@@ -24,7 +23,8 @@ const NewProject = () => {
         .then((data) => {
             console.log(data)
             //redirect
-            history("/projects", { message: "Projeto criado com sucesso!" });
+            const state = { message: "Projeto criado com sucesso!" };
+            navigate("/projects", {state});
         })
         .catch((err) => console.logo(err))
     }

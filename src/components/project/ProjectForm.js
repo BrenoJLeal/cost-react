@@ -8,7 +8,7 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
     const [project, setProject] = useState(projectData || {});
 
     useEffect(() =>{
-        fetch('http://localhost:5000/categories',
+        fetch('https://cost-server-kappa.vercel.app/categories',
         {
             method:"GET",
             headers: {
@@ -22,7 +22,7 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
         .catch((err) => console.log(err))
     },[])
 
-    const submit =(e) =>{
+    const submit = (e) =>{
         e.preventDefault()
         // console.log(project)
         handleSubmit(project)
@@ -30,7 +30,6 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
 
     const handleChange = (e) =>{
         setProject({...project, [e.target.name]: e.target.value})
-        
     }
     const handleSelect = (e) =>{
         setProject({
@@ -45,32 +44,31 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
     
     return ( 
         <form onSubmit={submit} className={styles.form}>
-            <div>
                 <Input 
                     type="text" 
                     text="Nome do projeto:" 
                     name='name' 
                     placeholder="Insira o nome do projeto"
-                    handleOnChange={handleChange}
                     value={project.name ? project.name: ''}
+                    handleOnChange={handleChange}
                 />
-            </div>
-            <div>
                 <Input 
                     type="number" 
                     text="Orçamento do projeto:" 
                     name='budget'
                     placeholder="Insira o orçamento total"
-                    handleOnChange={handleChange}
                     value={project.budget ? project.budget: ''}
+                    handleOnChange={handleChange}
                 />
-            </div>
-            <div>
-                <Select handleOnChange={handleSelect} name='category_id' text='Selecione a categoria:' value={project.category ? project.category.id: ''} options={categories} />
-            </div>
-            <div>
+                <Select 
+                    name='category_id' 
+                    text='Selecione a categoria:'  
+                    options={categories}
+                    value={project.category ? project.category.id: ''}
+                    handleOnChange={handleSelect}
+                />
                 <SubmitButton text={btnText}/>
-            </div>
+            
         </form>
      );
 }

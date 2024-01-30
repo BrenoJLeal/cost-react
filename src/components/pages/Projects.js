@@ -29,22 +29,7 @@ const Projects = () => {
         }).catch(err => console.log(err))
 
     },[])
-    const handleRemove = (id) => {
-        fetch(`https://cost-server-kappa.vercel.app/projects/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao remover o projeto');
-            }
-            // Atualiza a lista de projetos após a exclusão
-            setProjects(projects.filter(project => project.id !== id));
-        })
-        .catch(error => console.error('Erro:', error));
-    };
+    
     return ( 
 
         <div className={styles.project_container}>
@@ -62,7 +47,7 @@ const Projects = () => {
                         name={project.name} 
                         budget={project.budget} 
                         category={project.category.name} 
-                        handleRemove={handleRemove}
+                        
                         key={project.id}/>
                 )
             ))}

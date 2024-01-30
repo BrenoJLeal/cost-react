@@ -18,7 +18,7 @@ const ProjectCard = ({id, name, budget, category, handleRemove}) => {
                 <Link  to="#">
                     <Button size='large' variant="outlined" ><BsPencil/></Button>
                 </Link>
-                <Button size='large' variant="outlined" color="error" onClick={() => handleRemove(id)}>
+                <Button size='large' variant="outlined" color="error" >
                     <BsFillTrashFill/>
                 </Button>
             </div>

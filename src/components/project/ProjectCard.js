@@ -2,7 +2,7 @@ import styles from './ProjectCard.module.css'
 import {BsPencil, BsFillTrashFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
-const ProjectCard = ({id, name, budget, category}) => {
+const ProjectCard = ({id, name, budget, category, handleRemove}) => {
     
     
     return ( 
@@ -18,7 +18,7 @@ const ProjectCard = ({id, name, budget, category}) => {
                 <Link  to="#">
                     <Button size='large' variant="outlined" ><BsPencil/></Button>
                 </Link>
-                <Button size='large' variant="outlined" color="error">
+                <Button size='large' variant="outlined" color="error" onClick={() => handleRemove(id)}>
                     <BsFillTrashFill/>
                 </Button>
             </div>

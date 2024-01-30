@@ -15,7 +15,7 @@ const ProjectCard = ({id, name, budget, category}) => {
                 <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
             <div className={styles.project_card_actions}>
-                <Link  to="/">
+                <Link  to="#">
                     <Button size='large' variant="outlined" ><BsPencil/></Button>
                 </Link>
                 <Button size='large' variant="outlined" color="error">

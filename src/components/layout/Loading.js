@@ -2,7 +2,9 @@ import loading from '../../img/loading.svg'
 import styles from './Loading.module.css'
 const Loading = () => {
     return ( 
-        <p>a</p>
+        <div className={styles.loader_container}>
+            <img className={styles.loader} src={loading} alt="Loading" />
+        </div>
      );
 }
  

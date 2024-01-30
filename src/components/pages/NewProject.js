@@ -13,7 +13,7 @@ const NewProject = () => {
         project.services = []
         
         fetch('https://cost-server-kappa.vercel.app/projects',{
-            method: "POST",
+            method: "PUT",
             headers: {
                 'Content-type': 'application/json',
             },

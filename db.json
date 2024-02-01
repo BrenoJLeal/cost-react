@@ -30,17 +30,6 @@
           "id": "5cdaea09-7989-4a23-aded-7c014180cc86"
         }
       ]
-    },
-    {
-      "id": "317b",
-      "name": "Loading",
-      "budget": "12000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
     }
   ],
   "categories": [

@@ -23,7 +23,7 @@ const Projects = () => {
     }
     //Capta os projetos do banco de dados
     useEffect(() =>{
-        setTimeout(()=>{
+        
             fetch(`http://localhost:5000/projects/`, {
                 method: 'GET',
                 headers: {
@@ -35,7 +35,7 @@ const Projects = () => {
                 setProjects(data)
                 setRemoveLoading(true)
             }).catch(err => console.log(err))
-        },500)
+        
   
     },[])
 

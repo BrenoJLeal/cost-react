@@ -25,7 +25,7 @@ const Project = () => {
     
     //Captação do Projeto a ser editado
     useEffect(() =>{
-        setTimeout(()=>{
+        
             fetch(`http://localhost:5000/projects/${projectId}`,{
             method: 'GET',
             headers: {
@@ -38,7 +38,7 @@ const Project = () => {
             
         })
         .catch(err => console.log(err))
-        },500)
+        
     },[projectId]) 
 
     //Editor de Projetos

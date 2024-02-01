@@ -6,24 +6,6 @@
       "budget": "13",
       "cost": 0,
       "services": []
-    },
-    {
-      "id": "dab1",
-      "name": "Frontend",
-      "budget": "14000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 3000,
-      "services": [
-        {
-          "name": "Frontender",
-          "cost": "3000",
-          "description": "Contratar",
-          "id": "68c2b50b-e4d1-464f-98cf-5f5dcd715e18"
-        }
-      ]
     }
   ],
   "categories": [

@@ -26,7 +26,7 @@ const Project = () => {
     //Captação do Projeto a ser editado
     useEffect(() =>{
         setTimeout(()=>{
-            fetch(`https://cost-server-kappa.vercel.app/projects/${projectId}`,{
+            fetch(`http://localhost:5000/projects/${projectId}`,{
             method: 'GET',
             headers: {
                 'Content-Type' : 'application/json'
@@ -51,7 +51,7 @@ const Project = () => {
             return false
 
         }
-        fetch(`https://cost-server-kappa.vercel.app/projects/${project.id}`,{
+        fetch(`http://localhost:5000/projects/${project.id}`,{
             method: 'PATCH',
             headers: {
                 "Content-Type" : "application/json"
@@ -110,7 +110,7 @@ const createService = (project) =>{
     setRemainingBudget(remainingBudget);
 
     //Atualização do projeto
-    fetch(`https://cost-server-kappa.vercel.app/projects/${project.id}`,{
+    fetch(`http://localhost:5000/projects/${project.id}`,{
         method: "PATCH",
         headers:{
             'Content-Type' : 'application/json'
@@ -139,7 +139,7 @@ const removeService = (id, cost) => {
 
     newProject.cost = parseFloat(newProject.cost) - parseFloat(cost);
 
-    fetch(`https://cost-server-kappa.vercel.app/projects/${newProject.id}`, {
+    fetch(`http://localhost:5000/projects/${newProject.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'

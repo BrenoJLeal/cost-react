@@ -8,11 +8,13 @@ const NewProject = () => {
 
     //Função de Submit para o servidor JSON
     const createPost = (project) =>{
+        
         // Inicialização de cost e services
         project.cost = 0
         project.services = []
         
-        fetch('https://cost-server-kappa.vercel.app/projects',{
+        //Adiciona projetos do banco de dados 
+        fetch('http://localhost:5000/projects',{
             method: "POST",
             headers: {
                 'Content-type': 'application/json',

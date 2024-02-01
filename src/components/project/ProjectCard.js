@@ -4,23 +4,34 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 const ProjectCard = ({id, name, budget, category, handleRemove}) => {
     
+    const remove = (e) =>{
+        e.preventDefault()
+        handleRemove(id)
+    }
     
+
     return ( 
+
+        //Cards com informações do banco de dados
         <div className={styles.project_card} key={id}>
             <h4>{name}</h4>
             <p>
-                <span>Orçamento: R${budget}</span>
+                <span>Orçamento: R$ {parseFloat(budget).toLocaleString('pt-BR')}</span>
             </p>
             <p className={styles.category_text}>
                 <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
+
+
             <div className={styles.project_card_actions}>
-                <Link  to="#">
-                    <Button size='large' variant="outlined" ><BsPencil/></Button>
+                <Link  to={`/project${id}`}>
+                    <button title='Editar' size='large'>
+                        <BsPencil/>
+                    </button>
                 </Link>
-                <Button size='large' variant="outlined" color="error" >
+                <button title='Excluir' onClick={remove} size='large' color="primary" >
                     <BsFillTrashFill/>
-                </Button>
+                </button>
             </div>
         </div>
 

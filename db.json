@@ -12,8 +12,8 @@
       "name": "Frontend",
       "budget": "14000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 3000,
       "services": [
@@ -22,24 +22,6 @@
           "cost": "3000",
           "description": "Contratar",
           "id": "68c2b50b-e4d1-464f-98cf-5f5dcd715e18"
-        }
-      ]
-    },
-    {
-      "id": "5caa",
-      "name": "Frontend",
-      "budget": "9000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 5554,
-      "services": [
-        {
-          "name": "breno",
-          "cost": "5554",
-          "description": "Contratar",
-          "id": "da4d5465-7261-448a-9c8a-8b815de9be4d"
         }
       ]
     }

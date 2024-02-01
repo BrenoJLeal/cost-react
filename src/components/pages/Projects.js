@@ -24,7 +24,7 @@ const Projects = () => {
     //Capta os projetos do banco de dados
     useEffect(() =>{
         setTimeout(()=>{
-            fetch(`http://localhost:5000/projects/`, {
+            fetch(`https://cost-server-kappa.vercel.app/projects/`, {
                 method: 'GET',
                 headers: {
                     'Content-Type' : 'application/json',
@@ -42,7 +42,7 @@ const Projects = () => {
     //Deleta os projetosdobanco de dados
     function removeProject(id){
         setProjectMessage('')
-        fetch(`http://localhost:5000/projects/${id}`,{
+        fetch(`https://cost-server-kappa.vercel.app/projects/${id}`,{
             method: 'DELETE',
             headers:{
                 'Content-Type' : 'application/json'

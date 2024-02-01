@@ -12,8 +12,8 @@
       "name": "Modalidade Ágil",
       "budget": "13000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 5400,
       "services": [
@@ -30,6 +30,17 @@
           "id": "5cdaea09-7989-4a23-aded-7c014180cc86"
         }
       ]
+    },
+    {
+      "id": "2667",
+      "name": "Desenvolvedor Sênior",
+      "budget": "15000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [

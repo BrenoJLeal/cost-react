@@ -8,8 +8,12 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
     const [project, setProject] = useState(projectData || {});
 
     useEffect(() =>{
+<<<<<<< HEAD
         async function fetchData(){
             await fetch('https://cost-server-kappa.vercel.app/categories',
+=======
+        fetch('http://localhost:5000/categories',
+>>>>>>> 8f6d18db60b1b1cf21f168237bd184b1b55fa6ab
         {
             method:"GET",
             headers: {

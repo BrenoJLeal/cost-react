@@ -14,6 +14,7 @@ const Project = () => {
   const { id } = useParams();
   const projectId = id.replace("project", "");
 
+<<<<<<< HEAD
   const [project, setProject] = useState({});
   const [services, setServices] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
@@ -23,6 +24,35 @@ const Project = () => {
   const [deleteMessage, setDeleteMessage] = useState();
   const [type, setType] = useState();
   const [remainingBudget, setRemainingBudget] = useState(0);
+=======
+    
+    //Captação do Projeto a ser editado
+    useEffect(() =>{
+        
+            fetch(`http://localhost:5000/projects/${projectId}`,{
+            method: 'GET',
+            headers: {
+                'Content-Type' : 'application/json'
+            }
+        }).then(resp => resp.json())
+        .then(data => {
+            setProject(data);
+            setServices(data.services)
+            
+        })
+        .catch(err => console.log(err))
+        
+    },[projectId]) 
+
+    //Editor de Projetos
+    const editPost = (project) =>{
+        setMessage('')
+        //budget validation
+        if(project.budget < project.cost){
+            setMessage('O orçamento não pode ser menor que o custo do projeto!')
+            setType('error')
+            return false
+>>>>>>> 8f6d18db60b1b1cf21f168237bd184b1b55fa6ab
 
   //Captação do Projeto a ser editado
   useEffect(() => {
@@ -35,11 +65,20 @@ const Project = () => {
             "Content-Type": "application/json",
           },
         }
+<<<<<<< HEAD
       )
         .then((resp) => resp.json())
         .then((data) => {
           setProject(data);
           setServices(data.services);
+=======
+        fetch(`http://localhost:5000/projects/${project.id}`,{
+            method: 'PATCH',
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(project)
+>>>>>>> 8f6d18db60b1b1cf21f168237bd184b1b55fa6ab
         })
         .catch((err) => console.log(err));
     }, 500);
@@ -114,12 +153,26 @@ const Project = () => {
     setRemainingBudget(remainingBudget);
 
     //Atualização do projeto
+<<<<<<< HEAD
     await fetch(`https://cost-server-kappa.vercel.app/projects/${project.id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(project),
+=======
+    fetch(`http://localhost:5000/projects/${project.id}`,{
+        method: "PATCH",
+        headers:{
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(project)
+    }).then((resp) => resp.json())
+    .then((data) =>{
+        //Exibição dos serviços
+        setShowServiceForm(false)
+
+>>>>>>> 8f6d18db60b1b1cf21f168237bd184b1b55fa6ab
     })
       .then((resp) => resp.json())
       .then((data) => {
@@ -142,10 +195,15 @@ const Project = () => {
 
     newProject.cost = parseFloat(newProject.cost) - parseFloat(cost);
 
+<<<<<<< HEAD
     await fetch(
       `https://cost-server-kappa.vercel.app/projects/${newProject.id}`,
       {
         method: "PATCH",
+=======
+    fetch(`http://localhost:5000/projects/${newProject.id}`, {
+        method: 'PATCH',
+>>>>>>> 8f6d18db60b1b1cf21f168237bd184b1b55fa6ab
         headers: {
           "Content-Type": "application/json",
         },

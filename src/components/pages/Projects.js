@@ -9,7 +9,10 @@ import ProjectCard from "../project/ProjectCard";
 import { useState, useEffect } from "react";
 import Search from "../service/Search";
 
+
+
 const Projects = () => {
+   
     
     const [projects,setProjects] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
@@ -23,8 +26,8 @@ const Projects = () => {
     }
     //Capta os projetos do banco de dados
     useEffect(() =>{
-        setTimeout(()=>{
-            fetch(`https://cost-server-kappa.vercel.app/projects/`, {
+        setTimeout( async ()=>{
+           await fetch(`https://cost-server-kappa.vercel.app/projects/`, {
                 method: 'GET',
                 headers: {
                     'Content-Type' : 'application/json',
@@ -40,9 +43,9 @@ const Projects = () => {
     },[])
 
     //Deleta os projetosdobanco de dados
-    function removeProject(id){
+   async function removeProject(id){
         setProjectMessage('')
-        fetch(`https://cost-server-kappa.vercel.app/projects/${id}`,{
+       await fetch(`https://cost-server-kappa.vercel.app/projects/${id}`,{
             method: 'DELETE',
             headers:{
                 'Content-Type' : 'application/json'
@@ -54,6 +57,7 @@ const Projects = () => {
             // Atualiza a lista de projetos após a exclusão
             setProjects(projects.filter((project) => project.id !== id));
             setProjectMessage('Projeto removido com sucesso!')
+            
         })
         .catch(err => console.log(err))
     };

@@ -8,7 +8,8 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
     const [project, setProject] = useState(projectData || {});
 
     useEffect(() =>{
-        fetch('https://cost-server-kappa.vercel.app/categories',
+        async function fetchData(){
+            await fetch('https://cost-server-kappa.vercel.app/categories',
         {
             method:"GET",
             headers: {
@@ -20,6 +21,8 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
             setCategories(data)
         })
         .catch((err) => console.log(err))
+        }
+        fetchData()
     },[])
 
     const submit = (e) =>{
@@ -70,7 +73,7 @@ const ProjectForm = ({handleSubmit, projectData, btnText}) => {
                 <SubmitButton text={btnText}/>
             
         </form>
-     );
+    );
 }
- 
+
 export default ProjectForm;

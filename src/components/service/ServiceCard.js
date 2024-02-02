@@ -1,13 +1,14 @@
 import styles from '../project/ProjectCard.module.css'
 import {BsFillTrashFill} from 'react-icons/bs'
 import { Button } from '@mui/material';
+import { useEffect } from 'react';
 const ServiceCard = ({id,name,cost,description,handleRemove}) => {
-
-    const remove = (e) =>{
-        e.preventDefault()
-        handleRemove(id, cost)
-    }
-
+        
+        const remove = (e) =>{
+            e.preventDefault()
+            handleRemove(id, cost)
+        }
+    
     return ( 
             <div className={styles.project_card}>
                 <h4>{name}</h4>

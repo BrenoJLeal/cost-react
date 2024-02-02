@@ -7,14 +7,14 @@ const NewProject = () => {
     const navigate = useNavigate()
 
     //Função de Submit para o servidor JSON
-    const createPost = (project) =>{
+     const createPost = async (project) =>{
         
         // Inicialização de cost e services
         project.cost = 0
         project.services = []
         
         //Adiciona projetos do banco de dados 
-        fetch('https://cost-server-kappa.vercel.app/projects',{
+        await fetch('https://cost-server-kappa.vercel.app/projects',{
             method: "POST",
             headers: {
                 'Content-type': 'application/json',
